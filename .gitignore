@@ -4,5 +4,6 @@ venv/
 *.obj
 *.pdb
 build/
+__pycache__/
 .vscode/
 .*/
