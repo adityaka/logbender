@@ -1,0 +1,8 @@
+venv/
+*.exe
+*.pyc
+*.obj
+*.pdb
+build/
+.vscode/
+.*/
