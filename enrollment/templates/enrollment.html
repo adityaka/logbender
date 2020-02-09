@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<p class="col-md-2"> <h2>Congratulations You have enrolled in </h2> </p>
+<div class="col">
+    <div class="row"> <b> Course ID </b></div>
+    <div class="row"> {{ data['courseID'] }} </div>
+</div>
+<div class="col">
+    <div class="row"> <b> Course Title </b> </div>
+    <div class="row"> {{ data['title'] }} </div>
+</div>
+<div class="col">
+    <div class="row"> <b> Course Duration </b> </div>
+    <div class="row"> {{ data['duration'] }} </div>
+</div>
+</div>
+{% endblock content %}

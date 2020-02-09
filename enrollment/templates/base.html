@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        {% include "includes/stylesheets.html" %}
+        {% include "includes/header.html" %}
+       
+        {% include "includes/nav.html" %}
+         <hr/>
+        <div class="contaier"> 
+            {% block content %}
+
+            {% endblock content %}
+        <div>
+        <hr/>
+        {% include "includes/footer.html" %}
+    </body>
+</html>

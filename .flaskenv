@@ -1,2 +1,3 @@
 FLASK_ENV=development
-FLASK_APP=enrollment/main.py
+FLASK_APP=enrollment
+SECRET_KEY=hahahehehohobakarkey

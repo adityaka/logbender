@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+<thead>
+<tr>
+    <td> Course Id </td>
+    <td> Course Title </td>
+    <td> Course Duration </td>
+    <td> Course Credits </td> 
+</tr>
+</thead>
+<tbody>
+    {% for courseId in coursesDict  %}
+        <tr>
+            <td> {{ courseId }} </td>
+            <td> {{ coursesDict[courseId]['courseTitle'] }} </td>
+            <td> {{ coursesDict[courseId]['duration'] }} </td>
+            <td> {{ coursesDict[courseId]['credits'] }} </td>
+            <td> 
+            <form action="{{ url_for('enroll') }}" method="POST">
+                <input type="hidden" name="courseID" value="{{ courseId }}"/> 
+                <input type="hidden" name="title" value="{{ coursesDict[courseId]['courseTitle'] }}"/>
+                <input type="hidden" name="duration" value="{{ coursesDict[courseId]['duration'] }}"/>
+                <input type="submit" value="Enroll"  class="btn-primary"/>
+            </form>
+            </td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>    
+{% endblock content %}
